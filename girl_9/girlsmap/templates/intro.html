@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/intro/style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/intro/style.css' %}" />
     <title>술꾼도시여자들</title>
   </head>
 
@@ -23,7 +25,7 @@
 
       <img
         id="img"
-        src="./images/startBtn.png"
+        src="{% static 'images/startBtn.png' %}"
         onmouseover="hoverImg()"
         onmouseout="unhoverImg()"
         onclick="js:start()"
@@ -34,12 +36,12 @@
       <h5>WARNING</h5>
       <p>
         당신의 생물학적 성별이<br />
-        여성(<img src="./images/women.png" alt="" />)입니까?
+        여성(<img src="{% static 'images/women.png' %}" alt="" />)입니까?
       </p>
       <button id="btnY" onclick="location.href='index.html'">예 (YES)</button
       ><button id="btnN" onclick="changeText()">아니오 (NO)</button>
     </section>
 
-    <script src="./assets/js/intro.js"></script>
+    <script src="{% static 'assets/js/intro.js' %}"></script>
   </body>
 </html>

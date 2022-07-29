@@ -1,12 +1,142 @@
-<br>{{ bar.name }}
-<br>
-<br>{{ bar.location }}
-<br>
-<br>{{ bar.information }}
+{% load static %}
+<!DOCTYPE html>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>{{ bar.name }}</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span
+            ><span class="title">women in the city of Drunker</span>
+          </a>
 
-<br><p><a href="{% url 'Main' %}">이전으로</a></p> 
+          <!-- Nav -->
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-<br><p><a href="{% url 'Delete' bar.id %}">삭제하기</a></p>
+      <!-- Menu -->
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="list.html">목록으로 장소 찾기</a></li>
+          <li><a href="map.html">지도로 장소 찾기</a></li>
+          <li><a href="com.html">커뮤니티</a></li>
+          <li><a href="mypage.html">마이페이지</a></li>
+        </ul>
+      </nav>
 
-<br><p><a href="{% url 'Edit' bar.id %}">수정하기</a></p>
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <h1>지도로 장소 찾기</h1>
+            <!--
+								* 카카오맵 - 약도서비스
+								* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
+								* 약도의 수 만큼 소스를 새로 생성, 삽입해야 합니다.
+							-->
+          <!-- 1. 약도 노드 -->
+          <div
+          id="daumRoughmapContainer1659110986389"
+          class="root_daum_roughmap root_daum_roughmap_landing"
+        ></div>
 
+        <!-- 2. 설치 스크립트 -->
+        <script
+          charset="UTF-8"
+          class="daum_roughmap_loader_script"
+          src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+        ></script>
+
+        <!-- 3. 실행 스크립트 -->
+        <script charset="UTF-8">
+          new daum.roughmap.Lander({
+            timestamp: '1659110986389',
+            key: '2b7vv',
+            mapWidth: '1345',
+            mapHeight: '500',
+          }).render();
+        </script>
+          <br />
+          <p class="sogae"><br>{{ bar.information }}</p>
+        </div>
+      </div>
+      <br><a href="{% url 'Main' %}">이전으로</a>
+
+<br><a href="{% url 'Delete' bar.id %}">삭제하기</a>
+
+<br><a href="{% url 'Edit' bar.id %}">수정하기</a>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <img src="{% static 'images/footer_img.svg' %}" alt="" class="footer_img" />
+            <h2 class="footer_text">酒.都.女</h2>
+            <p class="footer_text">
+              Team 여모우모(여기모여 우리모여) <br />
+              깃허브
+              <a href="mypage.html"
+                >https://github.com/yumiiiiiii/girls_9.git</a
+              >
+            </p>
+          </section>
+          <section>
+            <img
+              src="{% static 'images/likelion.png' %}"
+              alt=""
+              class="footer_img2"
+            /><br /><br />
+            <p class="footer_text2">
+              기획디자인 | 이수빈<br />
+              프론트엔드 | 차다현 김채이<br />
+              백엔드 | 최유미 이수민
+            </p>
+          </section>
+          <ul class="copyright">
+            <li>서비스 이용약관</li>
+            <li>개인정보 처리방침</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts --><!DOCTYPE html>
+    <!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -6,10 +6,15 @@ from .forms import *
 # Create your views here.
 
 def Map(request):
-    return render(request, 'default.html')
+    return render(request, 'list.html')
 
-def Search(request):
-    return render(request, 'search.html')
+def Index(request):
+    return render(request, 'index.html')
+
+def Intro(request):
+    return render(request, 'intro.html')
+
+
 
 def Main(request):
     bars=bar.objects
@@ -46,3 +51,4 @@ def Update(request, bar_id):
     bar_update.information=request.POST['information']
     bar_update.save()
     return redirect('Main')
+

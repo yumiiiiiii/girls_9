@@ -21,8 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('map/', Map, name='Map'),
-    path('map/search', Search, name='Search'),
+    path('front/', Map, name='Map'),
+    path('intro/', Intro, name='Intro'),
+    path('front/index.html', Index, name='Index'),
+    
     path('main/', Main, name='Main'),
     path('main/<int:bar_id>', Detail, name='Detail'),
     path('new/', New, name='New'),

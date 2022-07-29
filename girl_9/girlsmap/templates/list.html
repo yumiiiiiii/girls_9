@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+{% load static %}
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -8,9 +9,10 @@
 	<head>
 		<title>목록으로 장소 찾기</title>
 		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -22,7 +24,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">women in the city of Drunker</span>
+									<span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span class="title">women in the city of Drunker</span>
 								</a>
 
 							<!-- Nav -->
@@ -58,11 +60,12 @@
 								<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" class="search_3">
 							</div>
 							
+							
 
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="{% static 'images/pic01.jpg' %}" alt="" />
 									</span>
 									<a href="list.html">
 										<h2>감래</h2>										<div class="content">

@@ -1,3 +1,4 @@
+
 const main = document.querySelector('#main');
 const warning = document.querySelector('#warning');
 const img = document.getElementById('img');
