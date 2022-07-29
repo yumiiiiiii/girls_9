@@ -1,0 +1,12 @@
+<br>{{ bar.name }}
+<br>
+<br>{{ bar.location }}
+<br>
+<br>{{ bar.information }}
+
+<br><p><a href="{% url 'Main' %}">이전으로</a></p> 
+
+<br><p><a href="{% url 'Delete' bar.id %}">삭제하기</a></p>
+
+<br><p><a href="{% url 'Edit' bar.id %}">수정하기</a></p>
+

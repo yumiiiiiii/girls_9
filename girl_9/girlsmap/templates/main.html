@@ -1,0 +1,14 @@
+{% for bar in bars.all %}
+<br><a href="{% url 'Detail' bar.id %}">{{ bar.name }}</a>
+<br>{{ bar.location }}
+<!-- <br>{{ bar.information }} -->
+{% if bar.photo %}
+    <span><br><img src="{{ bar.photo.url }}" alt="" height="200px;"></span>
+{% endif %}
+<br>
+{% endfor %}
+<br>
+<br>
+<br>
+<a href="{% url 'New' %}">새로운 장소 추가</a>
+<!-- <p><a href="{% url 'Map' %}">지도로</a></p> -->
