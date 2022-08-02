@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+</head>
+<body>
+    <form action="{% url 'Update' bar_edit.id %}" method="post">
+
+        {% csrf_token %}
+        <p>가게명: <input type="text" name="name" value="{{ bar_edit.name }}"></p>
+        <p>장소: <input type="text" name="location" value="{{ bar_edit.location }}"></p>
+        소개: <textarea name="information" cols="30" rows="10">{{ bar_edit.information }}</textarea>
+        <button type="submit">수정</button>
+    </form>
+
+</body>
+</html>
